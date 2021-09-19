@@ -138,6 +138,8 @@
           ("gtk-layer-shell" ,gtk-layer-shell))
       )
    )
+   (arguments
+     `(#:meson ,meson-next))
    (home-page "https://wayfire.org")
    (synopsis "Panel, dock and background applications for wayfire")
    (description synopsis)
