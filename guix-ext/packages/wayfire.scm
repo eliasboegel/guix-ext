@@ -51,15 +51,22 @@
    (inputs
     `(("bash" ,bash)
       ("glm" ,glm)
-      ("wayland" ,wayland)
+      ("wayland_server" ,wayland)
+      ("wayland_client" ,wayland)
+      ("wayland_cursor" ,wayland)
       ("wayland-protocols" ,wayland-protocols)
+      ("egl" ,egl-wayland)
       ("cairo" ,cairo)
       ("libdrm" ,libdrm)
       ("mesa" ,mesa)
       ("libinput" ,libinput)
-      ("libxkbcommon" ,libxkbcommon)
+      ("libnotify" ,libnotify)
+      ("xkbcommon" ,libxkbcommon)
       ("libevdev" ,libevdev)
       ("wlroots" ,wlroots)
+      ("pixman-1" ,pixman)
+      ("libjpg" ,libjpg)
+      ("libpng" ,libpng)
       ("libxml2" ,libxml2)
       ("bash" ,bash)
       ("wf-config" ,wayfire-config)
@@ -148,7 +155,6 @@
 
 
 (define-public wayfire-config-manager
-  ;;FIXME: unbundle gtk-layer-shell and gvc
   (package
    (name "wayfire-config-manager")
    (version "0.7.0")
