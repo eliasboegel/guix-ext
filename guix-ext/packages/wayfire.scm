@@ -46,8 +46,7 @@
               "0cnq06fyzvhbf9a8vs6ifhjjkvqgjjh2d39x58chiv84cm3wza6d"))))
    (build-system meson-build-system)
    (native-inputs
-    `(("gcc" ,gcc-8) ;; For <filesystem> include: https://github.com/loot/libloot/issues/56#issuecomment-498404104
-                     ;; Also could avoid this input and specify c++17 maybe: https://stackoverflow.com/a/39231488
+    `(("gcc" ,gcc-8)
       ("pkg-config" ,pkg-config)))
    (inputs
     `(("bash" ,bash)
@@ -63,7 +62,7 @@
       ("wlroots" ,wlroots)
       ("libxml2" ,libxml2)
       ("bash" ,bash)
-      ("wf-config" ,wayfire-config)
+      ("wf-config" ,wf-config)
       ))
 ;;   (arguments
 ;;    `(#:configure-flags `(,(string-append "-Dcpp_args=-I" (assoc-ref %build-inputs "wf-config") "/include/wayfire")
@@ -84,9 +83,9 @@
 
 
 
-(define-public wayfire-config
+(define-public wf-config
   (package
-   (name "wayfire-config")
+   (name "wf-config")
    (version "0.7.1")
    (source (origin
             (method url-fetch)
@@ -111,9 +110,9 @@
 
 
 
-(define-public wayfire-shell
+(define-public wf-shell
   (package
-   (name "wayfire-shell")
+   (name "wf-shell")
    (version "0.7.0")
    (source (origin
             (method url-fetch)
@@ -128,12 +127,12 @@
      `(("pkg-config" ,pkg-config))))
    (inputs
       (append
-          (package-inputs wayfire-config)
+          (package-inputs wf-config)
           (package-inputs wayfire)
           `(("gtkmm" ,gtkmm)
           ("libpulse" ,pulseaudio)
           ("alsa-lib" ,alsa-lib)
-          ("wf-config" ,wayfire-config)
+          ("wf-config" ,wf-config)
           ("wayfire" ,wayfire)
           ("libgvc" ,graphviz)
           ("gtk-layer-shell" ,gtk-layer-shell))
@@ -148,10 +147,10 @@
 
 
 
-(define-public wayfire-config-manager
+(define-public wf-config-manager
   ;;FIXME: unbundle gtk-layer-shell and gvc
   (package
-   (name "wayfire-config-manager")
+   (name "wf-config-manager")
    (version "0.7.0")
    (source (origin
             (method url-fetch)
@@ -166,9 +165,9 @@
    (inputs
       (append
         (package-inputs wayfire)
-        (package-inputs wayfire-shell)
+        (package-inputs wf-shell)
         `(("wayfire" ,wayfire)
-        ("wf-shell" ,wayfire-shell)
+        ("wf-shell" ,wf-shell)
         ("libevdev" ,libevdev)
         )
       )
