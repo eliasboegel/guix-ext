@@ -166,8 +166,8 @@
      `(("pkg-config" ,pkg-config))))
    (inputs
       (append
-          (package-inputs wayfire-config)
           (package-inputs wayfire)
+          (package-inputs wayfire-shell)
           `(("wayfire" ,wayfire)
           ("wf-shell" ,wayfire-shell)
           ("libevdev" ,libevdev)
@@ -179,3 +179,4 @@
    (synopsis "Configuration Manager for Wayfire")
    (description synopsis)
    (license license:expat)))
+)
