@@ -32,11 +32,8 @@
    (name "wf-config")
    (version "0.7.1")
    (source (origin
-            (method git-fetch)
-            (uri (git-reference
-                  (url "https://github.com/WayfireWM/wf-config")
-                  (commit version)))
-            (file-name (git-file-name name version))
+            (method url-fetch)
+            (uri "https://github.com/WayfireWM/wf-config/releases/download/v0.7.1/wf-config-0.7.1.tar.xz")
             (sha256
              (base32
               "1w75yxhz0nvw4mlv38sxp8k8wb5h99b51x3fdvizc3yaxanqa8kx"))))
