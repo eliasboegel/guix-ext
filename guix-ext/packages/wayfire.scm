@@ -206,7 +206,7 @@
                       (commit "889fdafa7b09fc6ce70313fd3f067cfc8c21a2ac")))
             (sha256
              (base32
-              "19za1fnlf5hz4n4mxxwqcr5yxp6mga9ah539ifnjnqrgvj19cjlj"))))
+              "146n07rhnr5y403aj4hm159frbg7xq80bpfi6l8g3h26qysq4vn"))))
    (build-system meson-build-system)
    (home-page "https://wayfire.org")
    (synopsis "Utility classes for Wayfire")
