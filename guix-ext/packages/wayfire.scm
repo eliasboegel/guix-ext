@@ -68,7 +68,7 @@
       ("libevdev" ,libevdev)
       ("wlroots" ,wlroots)
       ("pixman-1" ,pixman)
-      ("libjpeg" ,libjpeg)
+      ("libjpeg" ,libjpeg-turbo)
       ("libpng" ,libpng)
       ("libxml2" ,libxml2)
       ("bash" ,bash)
