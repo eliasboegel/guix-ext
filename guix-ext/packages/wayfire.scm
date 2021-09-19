@@ -89,10 +89,10 @@
       ("bash" ,bash)
       ("wf-config" ,wf-config)
       ))
-;;   (arguments
-;;    `(#:configure-flags `(,(string-append "-Dcpp_args=-I" (assoc-ref %build-inputs "wf-config") "/include/wayfire")
-;;                          ,(string-append "-Dcpp_link_args=-ldl " (assoc-ref %build-inputs "wlroots") "/lib/libwlroots.so " (assoc-ref %build-inputs "wf-config") "/lib/libwf-config.so"))))
+
    (arguments
+    `(#:configure-flags`(,(string-append "-Dcpp_args=-I" (assoc-ref %build-inputs "wf-config") "/include/wayfire")
+                          ,(string-append "-Dcpp_link_args=-ldl " (assoc-ref %build-inputs "wlroots") "/lib/libwlroots.so " (assoc-ref %build-inputs "wf-config") "/lib/libwf-config.so"))))
     `(#:tests? #f ;; file-parsing test fails for wf-config
       #:phases (modify-phases %standard-phases
                               (add-after 'unpack 'patch-shell-path
@@ -133,8 +133,8 @@
           ("alsa-lib" ,alsa-lib)
           ("wf-config" ,wf-config)
           ("wayfire" ,wayfire)
-          ("wayland-client" ,wayland)
-          ("wayland-protocols" ,wayland-protocols)
+          ;("wayland-client" ,wayland)
+          ;("wayland-protocols" ,wayland-protocols)
           ("libgvc" ,graphviz)
           ("gtk-layer-shell" ,gtk-layer-shell))
       )
