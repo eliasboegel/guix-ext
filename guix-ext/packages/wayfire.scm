@@ -192,24 +192,24 @@
 
 
 
-(define-public wayfire-utils
-(let ((commit "889fdafa7b09fc6ce70313fd3f067cfc8c21a2ac")
-        (revision "1"))
-  (package
-   (name "wayfire-utils")
-   (version "20210516")
-   (source (origin
-            (method git-fetch)
-            (uri (git-reference
-                  (url "https://github.com/WayfireWM/wf-utils")
-                  (commit commit)))
-            (sha256 (base32 "146n07rhnr5y403aj4hm159frbg7xq80bpfi6l8g3h26qysq4vn"))
-            )
-    )
-   (build-system meson-build-system)
-   (home-page "https://wayfire.org")
-   (synopsis "Utility classes for Wayfire")
-   (description synopsis)
-   (license license:expat)
-  )
-))
+;(define-public wayfire-utils
+;(let ((commit "889fdafa7b09fc6ce70313fd3f067cfc8c21a2ac")
+;        (revision "1"))
+;  (package
+;   (name "wayfire-utils")
+;   (version "20210516")
+;   (source (origin
+;            (method git-fetch)
+;            (uri (git-reference
+;                  (url "https://github.com/WayfireWM/wf-utils")
+;                  (commit commit)))
+;            (sha256 (base32 "146n07rhnr5y403aj4hm159frbg7xq80bpfi6l8g3h26qysq4vn"))
+;            )
+;    )
+;   (build-system meson-build-system)
+;   (home-page "https://wayfire.org")
+;   (synopsis "Utility classes for Wayfire")
+;   (description synopsis)
+;   (license license:expat)
+;  )
+;))
