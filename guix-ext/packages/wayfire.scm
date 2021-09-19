@@ -72,7 +72,7 @@
       ("libpng" ,libpng)
       ("libxml2" ,libxml2)
       ("bash" ,bash)
-      ("wf-config" ,wayfire-config)
+      ;("wf-config" ,wayfire-config)
       ))
    (arguments
     `(#:tests? #f
@@ -95,30 +95,31 @@
 
 
 
-(define-public wayfire-config
-  (package
-   (name "wayfire-config")
-   (version "0.7.1")
-   (source (origin
-            (method url-fetch)
-            (uri "https://github.com/WayfireWM/wf-config/releases/download/v0.7.1/wf-config-0.7.1.tar.xz")
-            (sha256 (base32 "1w75yxhz0nvw4mlv38sxp8k8wb5h99b51x3fdvizc3yaxanqa8kx"))
-            )
-   )
-   (build-system meson-build-system)
-   (native-inputs
-    (append (package-native-inputs wlroots)
-            `(("pkg-config" ,pkg-config))))
-   (inputs
-    (append (package-inputs wlroots)
-            `(("wlroots" ,wlroots)
-              ("libevdev" ,libevdev)
-	            ("glm" ,glm)
-              ("libxml2" ,libxml2))))
-   (home-page "https://wayfire.org")
-   (synopsis "Configuration library for Wayfire")
-   (description "synopsis")
-   (license license:expat)))
+;(define-public wayfire-config
+;  (package
+;   (name "wayfire-config")
+;   (version "0.7.1")
+;   (source (origin
+;            (method url-fetch)
+;            (uri "https://github.com/WayfireWM/wf-config/releases/download/v0.7.1/wf-config-0.7.1.tar.xz")
+;            (sha256 (base32 "1w75yxhz0nvw4mlv38sxp8k8wb5h99b51x3fdvizc3yaxanqa8kx"))
+;            )
+;   )
+;   (build-system meson-build-system)
+;   (native-inputs
+;    (append (package-native-inputs wlroots)
+;            `(("pkg-config" ,pkg-config))))
+;   (inputs
+;    (append (package-inputs wlroots)
+;            `(("wlroots" ,wlroots)
+;              ("libevdev" ,libevdev)
+;	            ("glm" ,glm)
+;              ("libxml2" ,libxml2))))
+;   (home-page "https://wayfire.org")
+;   (synopsis "Configuration library for Wayfire")
+;   (description "synopsis")
+;   (license license:expat))
+;)
 
 
 
@@ -139,12 +140,12 @@
      `(("pkg-config" ,pkg-config))))
    (inputs
       (append
-          (package-inputs wayfire-config)
+          ;(package-inputs wayfire-config)
           (package-inputs wayfire)
           `(("gtkmm" ,gtkmm)
           ("libpulse" ,pulseaudio)
           ("alsa-lib" ,alsa-lib)
-          ("wf-config" ,wayfire-config)
+          ;("wf-config" ,wayfire-config)
           ("wayfire" ,wayfire)
           ("libgvc" ,graphviz)
           ("gtk-layer-shell" ,gtk-layer-shell))
@@ -189,27 +190,3 @@
    (license license:expat)
   )
 )
-
-
-
-;(define-public wayfire-utils
-;(let ((commit "889fdafa7b09fc6ce70313fd3f067cfc8c21a2ac")
-;        (revision "1"))
-;  (package
-;   (name "wayfire-utils")
-;   (version "20210516")
-;   (source (origin
-;            (method git-fetch)
-;            (uri (git-reference
-;                  (url "https://github.com/WayfireWM/wf-utils")
-;                  (commit commit)))
-;            (sha256 (base32 "146n07rhnr5y403aj4hm159frbg7xq80bpfi6l8g3h26qysq4vn"))
-;            )
-;    )
-;   (build-system meson-build-system)
-;   (home-page "https://wayfire.org")
-;   (synopsis "Utility classes for Wayfire")
-;   (description synopsis)
-;   (license license:expat)
-;  )
-;))
