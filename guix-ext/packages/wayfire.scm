@@ -162,21 +162,20 @@
    (build-system meson-build-system)
    (native-inputs
     (append
-     ;(package-native-inputs wlroots)
      `(("pkg-config" ,pkg-config))))
    (inputs
       (append
-          (package-inputs wayfire)
-          (package-inputs wayfire-shell)
-          `(("wayfire" ,wayfire)
-          ("wf-shell" ,wayfire-shell)
-          ("libevdev" ,libevdev)
+        (package-inputs wayfire)
+        (package-inputs wayfire-shell)
+        `(("wayfire" ,wayfire)
+        ("wf-shell" ,wayfire-shell)
+        ("libevdev" ,libevdev)
+        )
       )
    )
-   ;(arguments
-   ;  `(#:meson ,meson-next))
    (home-page "https://wayfire.org")
    (synopsis "Configuration Manager for Wayfire")
    (description synopsis)
-   (license license:expat)))
+   (license license:expat)
+  )
 )
