@@ -5,6 +5,7 @@
   #:use-module ((guix licenses) #:prefix license:)
   #:use-module (guix utils)
   #:use-module (guix packages)
+  #:use-module (guix derivations)
   #:use-module (gnu packages)
   #:use-module (gnu packages build-tools)
   #:use-module (gnu packages gtk)
