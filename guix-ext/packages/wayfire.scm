@@ -129,7 +129,7 @@
           `(("gtkmm" ,gtkmm)
           ;("gobject-introspection" ,gobject-introspection)
           ("libpulse" ,pulseaudio)
-          ;("alsa-lib" ,alsa-lib)
+          ("alsa-lib" ,alsa-lib)
           ("wf-config" ,wf-config)
           ("wayfire" ,wayfire)
           ("wayland-client" ,wayland)
