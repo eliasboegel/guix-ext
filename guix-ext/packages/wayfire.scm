@@ -44,7 +44,9 @@
    (inputs
     (append (package-inputs wlroots)
             `(("wlroots" ,wlroots)
-              ("libevdev" ,libevdev))))
+              ("libevdev" ,libevdev)
+	      ("glm" ,glm)
+              ("libxml2" libxml2)))
    (home-page "https://wayfire.org")
    (synopsis "Config library for Wayfire")
    (description "synopsis")
