@@ -44,9 +44,9 @@
                   (url (string-append "https://github.com/WayfireWM/wayfire"))
                   (recursive? #t)
                   (commit (string-append "v" version))))
-            (sha256
-             (base32
-              "0cnq06fyzvhbf9a8vs6ifhjjkvqgjjh2d39x58chiv84cm3wza6d"))))
+            (sha256 (base32 "0cnq06fyzvhbf9a8vs6ifhjjkvqgjjh2d39x58chiv84cm3wza6d"))
+            )
+   )
    (build-system meson-build-system)
    (native-inputs
     `(("gcc" ,gcc-8)
@@ -74,11 +74,8 @@
       ("bash" ,bash)
       ("wf-config" ,wayfire-config)
       ))
-;;   (arguments
-;;    `(#:configure-flags `(,(string-append "-Dcpp_args=-I" (assoc-ref %build-inputs "wf-config") "/include/wayfire")
-;;                          ,(string-append "-Dcpp_link_args=-ldl " (assoc-ref %build-inputs "wlroots") "/lib/libwlroots.so " (assoc-ref %build-inputs "wf-config") "/lib/libwf-config.so"))))
    (arguments
-    `(#:tests? #f ;; file-parsing test fails for wf-config
+    `(#:tests? #f
       #:phases (modify-phases %standard-phases
                               (add-after 'unpack 'patch-shell-path
                                (lambda* (#:key inputs #:allow-other-keys)
@@ -105,9 +102,9 @@
    (source (origin
             (method url-fetch)
             (uri "https://github.com/WayfireWM/wf-config/releases/download/v0.7.1/wf-config-0.7.1.tar.xz")
-            (sha256
-             (base32
-              "1w75yxhz0nvw4mlv38sxp8k8wb5h99b51x3fdvizc3yaxanqa8kx"))))
+            (sha256 (base32 "1w75yxhz0nvw4mlv38sxp8k8wb5h99b51x3fdvizc3yaxanqa8kx"))
+            )
+   )
    (build-system meson-build-system)
    (native-inputs
     (append (package-native-inputs wlroots)
@@ -132,9 +129,9 @@
    (source (origin
             (method url-fetch)
             (uri "https://github.com/WayfireWM/wf-shell/releases/download/v0.7.0/wf-shell-0.7.0.tar.xz")
-            (sha256
-             (base32
-              "1isybm9lcpxwyf6zh2vzkwrcnw3q7qxm21535g4f08f0l68cd5bl"))))
+            (sha256 (base32 "1isybm9lcpxwyf6zh2vzkwrcnw3q7qxm21535g4f08f0l68cd5bl"))
+            )
+   )
    (build-system meson-build-system)
    (native-inputs
     (append
@@ -169,9 +166,9 @@
    (source (origin
             (method url-fetch)
             (uri "https://github.com/WayfireWM/wcm/releases/download/v0.7.0/wcm-0.7.0.tar.xz")
-            (sha256
-             (base32
-              "19za1fnlf5hz4n4mxxwqcr5yxp6mga9ah539ifnjnqrgvj19cjlj"))))
+            (sha256 (base32 "19za1fnlf5hz4n4mxxwqcr5yxp6mga9ah539ifnjnqrgvj19cjlj"))
+            )
+   )
    (build-system meson-build-system)
    (native-inputs
     (append
@@ -200,13 +197,13 @@
    (name "wayfire-utils")
    (version "20210516")
    (source (origin
-             (method git-fetch)
-                (uri (git-reference
-                      (url "https://github.com/WayfireWM/wf-utils")
-                      (commit "889fdafa7b09fc6ce70313fd3f067cfc8c21a2ac")))
-            (sha256
-             (base32
-              "146n07rhnr5y403aj4hm159frbg7xq80bpfi6l8g3h26qysq4vn"))))
+            (method git-fetch)
+            (uri (git-reference
+                  (url "https://github.com/WayfireWM/wf-utils")
+                  (commit "889fdafa7b09fc6ce70313fd3f067cfc8c21a2ac")))
+            (sha256 (base32 "146n07rhnr5y403aj4hm159frbg7xq80bpfi6l8g3h26qysq4vn"))
+            )
+    )
    (build-system meson-build-system)
    (home-page "https://wayfire.org")
    (synopsis "Utility classes for Wayfire")
