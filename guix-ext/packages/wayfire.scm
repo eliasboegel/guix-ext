@@ -148,10 +148,10 @@
 
 
 
-(define-public wayfire-shell
+(define-public wayfire-config-manager
   ;;FIXME: unbundle gtk-layer-shell and gvc
   (package
-   (name "wayfire-configmanager")
+   (name "wayfire-config-manager")
    (version "0.7.0")
    (source (origin
             (method url-fetch)
