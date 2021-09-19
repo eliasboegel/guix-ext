@@ -105,6 +105,7 @@
    (synopsis "Wayland compositor")
    (description "Wayland compositor extendable with plugins.")
    (license license:expat))
+)
 
 
 (define-public wf-shell
