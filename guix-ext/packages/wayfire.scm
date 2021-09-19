@@ -128,7 +128,7 @@
        ("wayfire" ,wayfire)
        ("wayland-client" ,wayland)
        ("wayland-protocols" ,wayland-protocols)
-       ("libgvc" ,graphviz-2.38)
+       ("graphviz" ,graphviz)
        ("gtk-layer-shell" ,gtk-layer-shell))
    )
    (home-page "https://wayfire.org")
