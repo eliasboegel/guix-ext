@@ -192,3 +192,25 @@
    (license license:expat)
   )
 )
+
+
+
+(define-public wayfire-utils
+  (package
+   (name "wayfire-utils")
+   (version "20210516")
+   (source (origin
+             (method git-fetch)
+                (uri (git-reference
+                      (url "https://github.com/WayfireWM/wf-utils")
+                      (commit "889fdafa7b09fc6ce70313fd3f067cfc8c21a2ac")))
+            (sha256
+             (base32
+              "19za1fnlf5hz4n4mxxwqcr5yxp6mga9ah539ifnjnqrgvj19cjlj"))))
+   (build-system meson-build-system)
+   (home-page "https://wayfire.org")
+   (synopsis "Utility classes for Wayfire")
+   (description synopsis)
+   (license license:expat)
+  )
+)
