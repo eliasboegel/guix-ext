@@ -26,10 +26,10 @@
   #:use-module (gnu packages graphics)
   #:use-module (gnu packages wm))
 
-;(define* (add-configure-flag package configure-flag)
-;  (substitute-keyword-arguments (package-arguments package)
-;                                ((#:configure-flags cf)
-;                                 `(cons ,configure-flag ,cf))))
+(define* (add-configure-flag package configure-flag)
+  (substitute-keyword-arguments (package-arguments package)
+                                ((#:configure-flags cf)
+                                 `(cons ,configure-flag ,cf))))
 
 (define-public wf-config
   (package
