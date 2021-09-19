@@ -85,7 +85,11 @@
                                  (substitute* "src/meson.build"
                                               (("/bin/sh") (string-append (assoc-ref inputs "bash") "/bin/bash")))
                                  (substitute* "src/core/core.cpp"
-                                              (("/bin/sh") (string-append (assoc-ref inputs "bash") "/bin/bash"))))))))
+                                              (("/bin/sh") (string-append (assoc-ref inputs "bash") "/bin/bash")))))))
+    `(#:configure-flags `(,(string-append "-Dcpp_args=-I" (assoc-ref %build-inputs "wf-config") "/include/wayfire")
+                          ,(string-append "-Dcpp_link_args=-ldl " (assoc-ref %build-inputs "wlroots") "/lib/libwlroots.so " (assoc-ref %build-inputs "wf-config") "/lib/libwf-config.so"))))                                        
+   )
+
    (home-page "https://wayfire.org")
    (synopsis "Wayland compositor")
    (description "Wayland compositor extendable with plugins.")
