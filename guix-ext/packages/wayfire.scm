@@ -22,6 +22,7 @@
   #:use-module (gnu packages gcc)
   #:use-module (gnu packages gnome)
   #:use-module (gnu packages graphics)
+  #:use-module (gnu packages image)
   #:use-module (gnu packages graphviz)
   #:use-module (gnu packages bash)
   #:use-module (gnu packages wm))
