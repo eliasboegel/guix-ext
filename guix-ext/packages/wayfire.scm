@@ -20,6 +20,7 @@
   #:use-module (gnu packages xml)
   #:use-module (gnu packages gcc)
   #:use-module (gnu packages bash)
+  #:use-module (gnu packages graphviz)
   #:use-module (gnu packages wm))
 
 (define* (add-configure-flag package configure-flag)
@@ -128,7 +129,7 @@
        ("wayfire" ,wayfire)
        ("wayland-client" ,wayland)
        ("wayland-protocols" ,wayland-protocols)
-       ("graphviz" ,graphviz)
+       ("libgvc" ,graphviz)
        ("gtk-layer-shell" ,gtk-layer-shell))
    )
    (home-page "https://wayfire.org")
