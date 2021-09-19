@@ -120,7 +120,7 @@
      (package-native-inputs wlroots)
      `(("pkg-config" ,pkg-config))))
    (inputs
-      ("gtkmm" ,gtkmm)
+      '(("gtkmm" ,gtkmm)
        ;("gobject-introspection" ,gobject-introspection)
        ("libpulse" ,pulseaudio)
        ;("alsa-lib" ,alsa-lib)
@@ -129,7 +129,7 @@
        ("wayland-client" ,wayland)
        ("wayland-protocols" ,wayland-protocols)
        ("libgvc" ,graphviz)
-       ("gtk-layer-shell" ,gtk-layer-shell)
+       ("gtk-layer-shell" ,gtk-layer-shell))
    )
    (home-page "https://wayfire.org")
    (synopsis "Panel, dock and background applications for wayfire")
