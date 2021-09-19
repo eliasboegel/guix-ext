@@ -19,6 +19,7 @@
   #:use-module (gnu packages xorg)
   #:use-module (gnu packages xml)
   #:use-module (gnu packages gcc)
+  #:use-module (gnu packages graphviz)
   #:use-module (gnu packages bash) ;; for use by wrap-program
   #:use-module (gnu packages wm)) ;; for wlroots
 
