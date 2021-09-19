@@ -113,7 +113,7 @@
             (uri "https://github.com/WayfireWM/wf-shell/releases/download/v0.7.0/wf-shell-0.7.0.tar.xz")
             (sha256
              (base32
-              "lisybm9lcpxwyf6zh2vzkwrcnw3q7qxm21535g4f08f0l68cd5bl"))))
+              "1isybm9lcpxwyf6zh2vzkwrcnw3q7qxm21535g4f08f0l68cd5bl"))))
    (build-system meson-build-system)
    (native-inputs
     (append
