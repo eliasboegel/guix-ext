@@ -120,7 +120,7 @@
      (package-native-inputs wlroots)
      `(("pkg-config" ,pkg-config))))
    (inputs
-      '(("gtkmm" ,gtkmm)
+      `(("gtkmm" ,gtkmm)
        ;("gobject-introspection" ,gobject-introspection)
        ("libpulse" ,pulseaudio)
        ;("alsa-lib" ,alsa-lib)
