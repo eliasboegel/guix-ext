@@ -70,7 +70,7 @@
    (build-system meson-build-system)
    (native-inputs
     `(("gcc" ,gcc-8) ;; For <filesystem> include: https://github.com/loot/libloot/issues/56#issuecomment-498404104
- https://stackoverflow.com/a/39231488
+ ;https://stackoverflow.com/a/39231488
       ("pkg-config" ,pkg-config)))
    (inputs
     `(("wayland-server" ,wayland)
