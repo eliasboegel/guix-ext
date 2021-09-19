@@ -6,6 +6,7 @@
   #:use-module (guix utils)
   #:use-module (guix packages)
   #:use-module (gnu packages)
+  #:use-module (gnu packages build-tools))
   #:use-module (gnu packages gtk)
   #:use-module (gnu packages glib)
   #:use-module (gnu packages pulseaudio)
