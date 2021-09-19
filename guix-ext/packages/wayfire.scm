@@ -46,7 +46,7 @@
             `(("wlroots" ,wlroots)
               ("libevdev" ,libevdev)
 	            ("glm" ,glm)
-              ("libxml2" libxml2))))
+              ("libxml2" ,libxml2))))
    (home-page "https://wayfire.org")
    (synopsis "Config library for Wayfire")
    (description "synopsis")
