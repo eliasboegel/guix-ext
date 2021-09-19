@@ -88,7 +88,7 @@
       ("wlroots" ,wlroots)
       ("libxml2" ,libxml2) ;; wf-config (git submodule)
       ("bash" ,bash)
-      ("wf-config" ,wf-config)
+      ;("wf-config" ,wf-config)
       ))
 
    (arguments ;(append
