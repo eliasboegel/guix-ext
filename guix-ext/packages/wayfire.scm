@@ -73,9 +73,11 @@
  ;https://stackoverflow.com/a/39231488
       ("pkg-config" ,pkg-config)))
    (inputs
-    list (
-        (package-inputs wlroots)
-        (package-inputs wf-config)
+    (append
+        (list
+            (package-inputs wlroots)
+            (package-inputs wf-config)
+        )
         `(("wayland-server" ,wayland)
         ("wayland-client" ,wayland)
         ("wayland-cursor" ,wayland)
