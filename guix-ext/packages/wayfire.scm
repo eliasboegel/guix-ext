@@ -62,7 +62,7 @@
       ("wlroots" ,wlroots)
       ("libxml2" ,libxml2)
       ("bash" ,bash)
-      ("wf-config" ,wf-config)
+      ("wf-config" ,wayfire-config)
       ))
 ;;   (arguments
 ;;    `(#:configure-flags `(,(string-append "-Dcpp_args=-I" (assoc-ref %build-inputs "wf-config") "/include/wayfire")
@@ -83,9 +83,9 @@
 
 
 
-(define-public wf-config
+(define-public wayfire-config
   (package
-   (name "wf-config")
+   (name "wayfire-config")
    (version "0.7.1")
    (source (origin
             (method url-fetch)
@@ -110,9 +110,9 @@
 
 
 
-(define-public wf-shell
+(define-public wayfire-shell
   (package
-   (name "wf-shell")
+   (name "wayfire-shell")
    (version "0.7.0")
    (source (origin
             (method url-fetch)
@@ -127,12 +127,12 @@
      `(("pkg-config" ,pkg-config))))
    (inputs
       (append
-          (package-inputs wf-config)
+          (package-inputs wayfire-config)
           (package-inputs wayfire)
           `(("gtkmm" ,gtkmm)
           ("libpulse" ,pulseaudio)
           ("alsa-lib" ,alsa-lib)
-          ("wf-config" ,wf-config)
+          ("wf-config" ,wayfire-config)
           ("wayfire" ,wayfire)
           ("libgvc" ,graphviz)
           ("gtk-layer-shell" ,gtk-layer-shell))
@@ -147,10 +147,10 @@
 
 
 
-(define-public wf-config-manager
+(define-public wayfire-config-manager
   ;;FIXME: unbundle gtk-layer-shell and gvc
   (package
-   (name "wf-config-manager")
+   (name "wayfire-config-manager")
    (version "0.7.0")
    (source (origin
             (method url-fetch)
@@ -165,9 +165,9 @@
    (inputs
       (append
         (package-inputs wayfire)
-        (package-inputs wf-shell)
+        (package-inputs wayfire-shell)
         `(("wayfire" ,wayfire)
-        ("wf-shell" ,wf-shell)
+        ("wf-shell" ,wayfire-shell)
         ("libevdev" ,libevdev)
         )
       )
