@@ -19,8 +19,8 @@
   #:use-module (gnu packages xorg)
   #:use-module (gnu packages xml)
   #:use-module (gnu packages gcc)
-  #:use-module (gnu packages bash) ;; for use by wrap-program
-  #:use-module (gnu packages wm)) ;; for wlroots
+  #:use-module (gnu packages bash)
+  #:use-module (gnu packages wm))
 
 (define* (add-configure-flag package configure-flag)
   (substitute-keyword-arguments (package-arguments package)
@@ -42,11 +42,11 @@
               "1w75yxhz0nvw4mlv38sxp8k8wb5h99b51x3fdvizc3yaxanqa8kx"))))
    (build-system meson-build-system)
    (native-inputs
-    (append (package-native-inputs wlroots-0.12.0)
+    (append (package-native-inputs wlroots)
             `(("pkg-config" ,pkg-config))))
    (inputs
-    (append (package-inputs wlroots-0.12.0)
-            `(("wlroots" ,wlroots-0.12.0)
+    (append (package-inputs wlroots)
+            `(("wlroots" ,wlroots)
               ("libevdev" ,libevdev))))
    (home-page "https://wayfire.org")
    (synopsis "Config library for Wayfire")
