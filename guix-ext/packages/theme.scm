@@ -24,7 +24,7 @@
    (inputs
       `(("gtk3" ,gtk+)
       ("python3" ,python)
-      ("python3-gobject" ,pygobject)
+      ("python3-gobject" ,python-pygobject)
       ("gdk-pixbuf2" ,gdk-pixbuf)
       )
    )
