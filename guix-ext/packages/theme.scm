@@ -7,6 +7,9 @@
   #:use-module (gnu packages gtk)
   #:use-module (gnu packages glib)
   #:use-module (gnu packages python)
+  #:use-module (gnu packages web)
+  #:use-module (gnu packages glib)
+  #:use-module (gnu packages gnome)
   )
 
 
@@ -26,6 +29,9 @@
       ("python3" ,python)
       ("python3-gobject" ,python-pygobject)
       ("gdk-pixbuf2" ,gdk-pixbuf)
+      ("sassc" ,libsass)
+      ("glib2" ,glib)
+      ("librsvg" ,librsvg)
       )
    )
    (home-page "https://wayfire.org")
