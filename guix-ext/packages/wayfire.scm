@@ -173,7 +173,10 @@
    (native-inputs
     (append
      (package-native-inputs wlroots)
-     `(("pkg-config" ,pkg-config))))
+     `(("pkg-config" ,pkg-config)
+      ("gcc", gcc-toolchain)
+     ))
+   )
    (build-system meson-build-system)
    (inputs
       (append
