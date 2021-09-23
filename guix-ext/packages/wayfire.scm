@@ -166,7 +166,7 @@
             )
             (file-name (git-file-name name version))
             (sha256
-                 (base32 "0xpqjivnnmr7x7i8fm7cix83x9xrr8g9r1v98mj330djr3gmk8rn")
+                 (base32 "0xpqjivnnmr7n7i8fm7cix83x9xrr8g9r1v98mj330djr3gmk8rn")
             )
    ))
    (build-system meson-build-system)
