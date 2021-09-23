@@ -172,7 +172,7 @@
    ))
    (native-inputs
     (append
-     (package-native-inputs wlroots)
+     (package-native-inputs wayfire)
      `(("pkg-config" ,pkg-config)
       ("gcc", gcc-toolchain)
      ))
