@@ -171,10 +171,9 @@
             )
    ))
    (native-inputs
-   `(("gcc" ,gcc-8)
-      ("pkg-config" ,pkg-config)
-      ("cmake" ,cmake)
-    ))
+    (append
+     (package-native-inputs wlroots)
+     `(("pkg-config" ,pkg-config))))
    (build-system meson-build-system)
    (inputs
       `(("wayfire" ,wayfire)
@@ -183,6 +182,8 @@
       ("cairo" ,cairo)
       )
    )
+   (arguments
+     `(#:meson ,meson-next))
    (home-page "https://github.com/Javyre/swayfire")
    (synopsis "Sway/I3 inspired tiling window manager for Wayfire")
    (description synopsis)
