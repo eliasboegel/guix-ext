@@ -24,7 +24,7 @@
   #:use-module (gnu packages image)
   #:use-module (gnu packages graphviz)
   #:use-module (gnu packages bash)
-  #:use-module (gnu packages cmake)
+  #:use-module (gnu packages commencement)
   #:use-module (gnu packages wm))
 
 
