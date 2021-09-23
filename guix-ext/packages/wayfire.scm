@@ -162,7 +162,7 @@
             (method git-fetch)
             (uri (git-reference
                 (url "https://github.com/Javyre/swayfire.git")
-                (commit "a5c38cf50659665cd98599392a993731b13fa8aa")))
+                (commit "a5c38cf50659665cd98599392a993731b13fa8aa"))
             )
             (file-name (git-file-name name version))
             (sha256
