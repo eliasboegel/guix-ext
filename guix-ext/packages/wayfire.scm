@@ -170,7 +170,10 @@
             )
    ))
    (native-inputs
-    `(("pkg-config" ,pkg-config)))
+   `(("gcc" ,gcc-8)
+      ("pkg-config" ,pkg-config)
+      ("cmake" ,cmake)
+    ))
    (build-system meson-build-system)
    (inputs
       `(("wayfire" ,wayfire)
