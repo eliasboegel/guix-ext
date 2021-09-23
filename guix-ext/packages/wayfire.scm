@@ -71,7 +71,6 @@
       ("libpng" ,libpng)
       ("libxml2" ,libxml2)
       ("bash" ,bash)
-      ;("wf-config" ,wayfire-config)
       ))
    (arguments
     `(#:tests? #f
@@ -139,12 +138,10 @@
      `(("pkg-config" ,pkg-config))))
    (inputs
       (append
-          ;(package-inputs wayfire-config)
           (package-inputs wayfire)
           `(("gtkmm" ,gtkmm)
           ("libpulse" ,pulseaudio)
           ("alsa-lib" ,alsa-lib)
-          ;("wf-config" ,wayfire-config)
           ("wayfire" ,wayfire)
           ("libgvc" ,graphviz)
           ("gtk-layer-shell" ,gtk-layer-shell))
@@ -157,35 +154,31 @@
    (description synopsis)
    (license license:expat)))
 
-
-
-(define-public wayfire-config-manager
+(define-public swayfire
   (package
-   (name "wayfire-config-manager")
-   (version "0.7.0")
+   (name "swayfire")
+   (version "23-09-2021")
    (source (origin
-            (method url-fetch)
-            (uri "https://github.com/WayfireWM/wcm/releases/download/v0.7.0/wcm-0.7.0.tar.xz")
-            (sha256 (base32 "19za1fnlf5hz4n4mxxwqcr5yxp6mga9ah539ifnjnqrgvj19cjlj"))
+            (method git-fetch)
+            (git-reference
+                (url "https://github.com/Javyre/swayfire.git")
+                (commit "a5c38cf50659665cd98599392a993731b13fa8aa"))
             )
    )
    (build-system meson-build-system)
-   (native-inputs
-    (append
-     `(("pkg-config" ,pkg-config))))
    (inputs
       (append
-        (package-inputs wayfire)
-        (package-inputs wayfire-shell)
         `(("wayfire" ,wayfire)
-        ("wf-shell" ,wayfire-shell)
-        ("libevdev" ,libevdev)
+        ("wlroots" ,wlroots)
+        ("pixman-1" ,pixman)
+        ("cairo" ,cairo)
         )
       )
    )
-   (home-page "https://wayfire.org")
-   (synopsis "Configuration Manager for Wayfire")
+   (home-page "https://github.com/Javyre/swayfire")
+   (synopsis "Sway/I3 inspired tiling window manager for Wayfire")
    (description synopsis)
-   (license license:expat)
+   (license license:gpl3)
   )
 )
+
