@@ -168,7 +168,7 @@
             (sha256
                  (base32 "17pjvprmdrx4h6bb1hhc98w9qi6ki7yl57f090n9kbhswxqfs7s3")
             )
-   )
+   ))
    (build-system meson-build-system)
    (inputs
       (append
@@ -185,4 +185,3 @@
    (license license:gpl3)
   )
 )
-
