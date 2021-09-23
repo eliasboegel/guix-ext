@@ -169,6 +169,8 @@
                  (base32 "0xpqjivnnmr7n7i8fm7cix83x9xrr8g9r1v98mj330djr3gmk8rn")
             )
    ))
+   (native-inputs
+    `(("pkg-config" ,pkg-config)))
    (build-system meson-build-system)
    (inputs
       `(("wayfire" ,wayfire)
