@@ -166,17 +166,17 @@
             )
             (file-name (git-file-name name version))
             (sha256
-                 (base32 "17pjvprmdrx4h6bb1hhc98w9qi6ki7yl57f090n9kbhswxqfs7s3")
+                 (base32 "0xpqjivnnmr7x7i8fm7cix83x9xrr8g9r1v98mj330djr3gmk8rn")
             )
    ))
    (build-system meson-build-system)
+   (native-inputs
+     `(("glibc-locales" ,pkg-config))))
    (inputs
-      (append
-        `(("wayfire" ,wayfire)
-        ("wlroots" ,wlroots)
-        ("pixman-1" ,pixman)
-        ("cairo" ,cairo)
-        )
+      `(("wayfire" ,wayfire)
+      ("wlroots" ,wlroots)
+      ("pixman-1" ,pixman)
+      ("cairo" ,cairo)
       )
    )
    (home-page "https://github.com/Javyre/swayfire")
