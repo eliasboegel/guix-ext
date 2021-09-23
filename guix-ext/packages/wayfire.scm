@@ -160,9 +160,9 @@
    (version "23-09-2021")
    (source (origin
             (method git-fetch)
-            (git-reference
+            (uri (git-reference
                 (url "https://github.com/Javyre/swayfire.git")
-                (commit "a5c38cf50659665cd98599392a993731b13fa8aa"))
+                (commit "a5c38cf50659665cd98599392a993731b13fa8aa")))
             )
    )
    (build-system meson-build-system)
