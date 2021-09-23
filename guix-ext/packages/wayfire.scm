@@ -170,8 +170,6 @@
             )
    ))
    (build-system meson-build-system)
-   (native-inputs
-     `(("glibc-locales" ,pkg-config))))
    (inputs
       `(("wayfire" ,wayfire)
       ("wlroots" ,wlroots)
