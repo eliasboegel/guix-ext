@@ -2,6 +2,7 @@
   #:use-module (guix download)
   #:use-module (guix git-download)
   #:use-module (guix build-system meson)
+  #:use-module (guix build-system cmake)
   #:use-module (gnu packages build-tools)
   #:use-module ((guix licenses) #:prefix license:)
   #:use-module (guix utils)
