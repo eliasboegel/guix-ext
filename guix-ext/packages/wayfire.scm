@@ -188,8 +188,10 @@
       )
    )
    (arguments
-     `(#:meson ,meson-next)
+     `(
+      #:meson ,meson-next
       #:build-type ,"release"
+      )
    )
    (home-page "https://github.com/Javyre/swayfire")
    (synopsis "Sway/I3 inspired tiling window manager for Wayfire")
