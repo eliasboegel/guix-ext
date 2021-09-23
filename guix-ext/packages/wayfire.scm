@@ -176,10 +176,12 @@
      `(("pkg-config" ,pkg-config))))
    (build-system meson-build-system)
    (inputs
-      `(("wayfire" ,wayfire)
-      ("wlroots" ,wlroots)
-      ("pixman-1" ,pixman)
-      ("cairo" ,cairo)
+      (append
+          (package-inputs wayfire)
+          `(("wayfire" ,wayfire)
+          ("wlroots" ,wlroots)
+          ("pixman-1" ,pixman)
+          ("cairo" ,cairo))
       )
    )
    (arguments
