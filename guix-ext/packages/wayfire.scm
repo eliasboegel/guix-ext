@@ -203,7 +203,7 @@
 
 
 (define-public wlroots-2021-09-24
-  (package (inherit wayfire)
+  (package (inherit wlroots)
     (name "wlroots-2021-09-24")
     (version "2021-09-24")
     (source (origin
