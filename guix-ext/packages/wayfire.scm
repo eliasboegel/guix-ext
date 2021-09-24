@@ -231,7 +231,7 @@
             (file-name (git-file-name name version))
               (sha256
                (base32
-                "0mgli9n0xal4dyxjpjlnsjnayip0gylq438db5p1kk4dajik0hrn"))))
+                "0mg1i9n0xal4dyxjpjlnsjnayip0gylq438db5p1kk4dajik0hrn"))))
 ))
 
 (define-public swayfire-2021-09-24
