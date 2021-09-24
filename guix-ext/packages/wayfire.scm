@@ -235,6 +235,8 @@
     (inputs
       `(("wlroots" ,wlroots-2021-09-24))
     )
+    (arguments
+     `(#:meson ,meson-next))
 ))
 
 (define-public swayfire-2021-09-24
