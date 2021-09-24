@@ -225,7 +225,7 @@
     (source (origin
               (method git-fetch)
             (uri (git-reference
-                (url "https://github.com/Javyre/swayfire.git")
+                (url "https://github.com/WayfireWM/wayfire.git")
                 (commit "5754aeb9765617e0eb296cac5303aaa82f69257e"))
             )
             (file-name (git-file-name name version))
