@@ -204,7 +204,7 @@
 
 (define-public wlroots-2021-09-24
   (package (inherit wayfire)
-    (name "wayfire-2021-09-24")
+    (name "wlroots-2021-09-24")
     (version "2021-09-24")
     (source (origin
               (method git-fetch)
