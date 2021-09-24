@@ -182,7 +182,86 @@
       (append
           (package-inputs wayfire)
           `(("wayfire" ,wayfire)
-          ("wlroots" ,wlroots)
+          ("wlroots" ,wlroots-2021-09-24)
+          ("pixman-1" ,pixman)
+          ("cairo" ,cairo))
+      )
+   )
+   (arguments
+     `(
+      #:meson ,meson-next
+      #:build-type ,"release"
+      )
+   )
+   (home-page "https://github.com/Javyre/swayfire")
+   (synopsis "Sway/I3 inspired tiling window manager for Wayfire")
+   (description synopsis)
+   (license license:gpl3)
+  )
+)
+
+
+
+(define-public wlroots-2021-09-24
+  (package (inherit wayfire)
+    (name "wayfire-2021-09-24")
+    (version "2021-09-24")
+    (source (origin
+              (method git-fetch)
+            (uri (git-reference
+                (url "https://github.com/swaywm/wlroots.git")
+                (commit "d96d2f5f23e1096ed70dbbf286d5f9480957f667"))
+            )
+            (file-name (git-file-name name version))
+              (sha256
+               (base32
+                "1b98qx6l1d4xnhjka68gbhmbfdcj48d0kw3wd1f05kg8d74qlqcr"))))
+))
+
+(define-public wayfire-2021-09-24
+  (package (inherit wayfire)
+    (name "wayfire-2021-09-24")
+    (version "2021-09-24")
+    (source (origin
+              (method git-fetch)
+            (uri (git-reference
+                (url "https://github.com/Javyre/swayfire.git")
+                (commit "5754aeb9765617e0eb296cac5303aaa82f69257e"))
+            )
+            (file-name (git-file-name name version))
+              (sha256
+               (base32
+                "0mgli9n0xal4dyxjpjlnsjnayip0gylq438db5plkk4dajik0hrn"))))
+))
+
+(define-public swayfire-2021-09-24
+  (package
+   (name "swayfire-2021-09-24")
+   (version "24-09-2021")
+   (source (origin
+            (method git-fetch)
+            (uri (git-reference
+                (url "https://github.com/Javyre/swayfire.git")
+                (commit "8c2cda501a4c801406e6361f74c61e0e21ed99d3"))
+            )
+            (file-name (git-file-name name version))
+            (sha256
+                 (base32 "0gjjn7k1qqa8f0fsyyk4qabc3p2w39fx4zcigfsya85xgn587shl")
+            )
+   ))
+   (native-inputs
+    (append
+     (package-native-inputs wayfire-2021-09-24)
+     `(("pkg-config" ,pkg-config)
+      ("gcc", gcc-toolchain)
+     ))
+   )
+   (build-system meson-build-system)
+   (inputs
+      (append
+          (package-inputs wayfire-2021-09-24)
+          `(("wayfire" ,wayfire-2021-09-24)
+          ("wlroots" ,wlroots-2021-09-24)
           ("pixman-1" ,pixman)
           ("cairo" ,cairo))
       )
