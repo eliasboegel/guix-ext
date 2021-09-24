@@ -234,6 +234,7 @@
                 "0mg1i9n0xal4dyxjpjlnsjnayip0gylq438db5p1kk4dajik0hrn"))))
     (inputs
       ´(("wlroots" ,wlroots-2021-09-24))
+    )
 ))
 
 (define-public swayfire-2021-09-24
