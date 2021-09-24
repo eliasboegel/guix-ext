@@ -261,7 +261,7 @@
       (append
           (package-inputs wayfire-2021-09-24)
           `(("wayfire" ,wayfire-2021-09-24)
-          ("wlroots" ,wlroots-2021-09-24)
+          ;("wlroots" ,wlroots)
           ("pixman-1" ,pixman)
           ("cairo" ,cairo))
       )
